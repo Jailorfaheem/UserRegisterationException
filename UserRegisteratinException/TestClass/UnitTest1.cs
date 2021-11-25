@@ -40,5 +40,38 @@ namespace ExceptionTest
             //comparing actual and expected value
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ValidEmailIdOfUser()
+        {
+            //AAA method
+            //Arrange
+            string message = " ";
+            string expected = "invalid";
+            //creating object of moodanalyzer class and passing message
+            UserException exception = new UserException(message);
+
+            //Act
+            string actual = exception.EmailIdValid();
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
+        public void ValidMobileNumOfUser()
+        {
+            //AAA method
+            //Arrange
+            string message = " ";
+            string expected = "invalid";
+            //creating object of moodanalyzer class and passing message
+            UserException exception = new UserException(message);
+
+            //Act
+            string actual = exception.MobileNumValid();
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
