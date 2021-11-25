@@ -1,12 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UserRegistrationException;
 
-namespace UserRegisteratinException.TestClass
+namespace ExceptionTest
 {
-    class UnitTest1
+    [TestClass]
+    public class UnitTest1
     {
+        [TestMethod]
+        public void ValidFirstNameOfUser()
+        {
+            //AAA method
+            //Arrange
+            string message = " ";
+            string expected = "invalid";
+            //creating object of moodanalyzer class and passing message
+            UserException exception = new UserException(message);
+
+            //Act
+            string actual = exception.ValidFirstName();
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ValidLastNameOfUser()
+        {
+            //AAA method
+            //Arrange
+            string message = " ";
+            string expected = "invalid";
+            //creating object of moodanalyzer class and passing message
+            UserException exception = new UserException(message);
+
+            //Act
+            string actual = exception.ValidLastName();
+
+            //Assert
+            //comparing actual and expected value
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
